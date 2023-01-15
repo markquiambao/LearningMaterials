@@ -3,6 +3,7 @@
   padding:0;
   box-sizing: border-box;
   font-family: "Tahoma", sans-serif;
+
 }
 
 
@@ -71,22 +72,24 @@ ul li a:active, ul li a:hover{
 background-position: 50%;
 background-size:cover;
 width:100%;
-height: 50vh;
+height: 80vh;
 background-repeat: no-repeat;
-background-image:linear-gradient(rgba(10, 10, 10, 0.7),rgba(15, 15, 15, 0.6)),url(../img/LR-background.jpg);
+background-image:linear-gradient(rgba(10, 10, 10, 0.7),rgba(15, 15, 15, 0.6)),url(../img/background.jpg);
 overflow: hidden;
-
+display: flex;
+flex-direction: column;
+justify-content: center;  
 }
 
 .hero h1 {
   color: #FFF;
   font-size: 40px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: flex;
   font-weight: 700mm;
   letter-spacing: 2px;
-  margin-top: 200px;
+ 
 }
 
 .hero p {
@@ -112,7 +115,7 @@ section .courses{
 }
 
 .box-courses {
-display: flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
@@ -138,6 +141,9 @@ display: flex;
   
 }
 
+.nav-icon {
+  vertical-align: middle;
+}
 .btn-courses:hover{
  background-color: #f3ebeb;
 }
@@ -178,7 +184,7 @@ display: flex;
   width: 20%;
   transition: all 0.2s;
 }
-.box:hover{
+.box:hover, .contact-us:hover{
 box-shadow: inset -1px 1px 9px 4px #ededed, -14px -14px 80px #fff;
     background-color: #f8f8ff;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -230,7 +236,161 @@ transition: .5s;
 
 }
 
+.contact {
+  width: 100%;
+  height: 50vh;
+  padding: 0;
+ 
+}
 
+.contact h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 100px 0px 100px 0px;
+  text-decoration: underline;
+}
+
+section .group-con {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+ 
+}
+
+.group-con img {
+  width: 100%;
+  max-width: 546px;
+  height: 100%;
+  margin: 50px;
+
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 550px;
+  border-radius: 22px;
+  background-color: #F3ebeb;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -4px 9px 18px -3px rgba(0,0,0,0.5);
+-webkit-box-shadow: -4px 9px 18px -3px rgba(0,0,0,0.5);
+-moz-box-shadow: -4px 9px 18px -3px rgba(0,0,0,0.5);
+}
+
+.contact-us label {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 25px;
+ 
+}
+
+.contact-us h2 {
+  padding: 20px;
+  text-decoration: underline;
+}
+
+input[type=text], select, textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
+}
+.submit-btn {
+  border: 1px solid rgba(0,0,0,.05);
+  background-image: linear-gradient(90deg,#0f2614 0,#887c89 51%,#283b78);;
+  box-shadow: 0 0 4px 0.3px #dcdde1;
+  color: white;
+  padding: 6px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  border-radius: 22px;
+  margin: 15px;
+
+}
+.submit-btn:hover{
+  color: rgb(198, 233, 253);
+  transition: .5s;
+}
+
+
+.footer-container {
+display: flex;
+min-height: 75vh;
+flex-flow: row wrap;
+
+}
+
+.footer-content {
+background: #F3ebeb;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 1em;
+margin-top: auto;
+
+}
+
+.footer-content p{
+  line-height: 1.59rem;
+  font-weight: 300;
+  /*width: 500px;*/
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
+.footer-content h2{
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+ 
+}
+
+.footer-sm {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+margin-right: 20px;
+
+}
+
+.footer-sm li {
+  margin:15px; 
+  list-style: none;
+}
+
+.footer-sm li a:active, ul li a:hover {
+  border: none;
+}
+
+.img-icons {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+
+
+
+/**MEDIA QUERY***/
 
 @media (max-width:912px) {
   .navbar {
@@ -276,7 +436,7 @@ transition: .5s;
   }
   .hero h1 {
   font-size: 20px;
-  margin-top: 150px;
+ 
   }
   .hero p {
   font-size: 15px;
@@ -288,7 +448,27 @@ transition: .5s;
 .box {
   width: 96%;
 }
+.group-con {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-us {
+  width: 95%;
+}
 
+.contact h1 {
+  font-size: 30px;
+  margin-bottom:-40px
+}
+.contact-us label {
+  font-size: 15px;
+}
+
+.img-icons {
+  height: 25px;
+  width: 25px;
+}
 
 }
 @media screen and (max-width:812px) and (min-width:375px){
