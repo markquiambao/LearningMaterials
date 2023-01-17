@@ -350,18 +350,20 @@ margin-top: auto;
   /*width: 500px;*/
   letter-spacing: 1px;
   font-size: 13px;
+  text-align:center;
 }
 
 .footer-content h2{
   font-size: 15px;
   font-weight: 800;
   text-decoration: underline;
+  text-align:center;
 }
 
 .social-media {
   display: flex;
   justify-content: space-evenly;
- 
+  
 }
 
 .footer-sm {
@@ -474,5 +476,12 @@ margin-right: 20px;
 @media screen and (max-width:812px) and (min-width:375px){
 .box {
   width:70%;
+  
 }
+  .footer-container{
+      margin-top:80%;
+  }
+  .footer-sm {
+    justify-content: center;
+  }
 }
